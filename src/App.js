@@ -5,7 +5,10 @@ function App() {
   const [inputValue, setInputValue] = useState('')
   const [listas, setLista] = useState([])
 
-  
+  useEffect(() => {
+    console.log('Estou a actualizar a lista')
+  }, [listas])
+
  const handleSubmit = (e) => {
    e.preventDefault();
 
