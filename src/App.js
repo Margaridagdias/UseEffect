@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
-        <h1>Write something</h1>
+        <h1>To do list</h1>
 
         <input
           type="text"
@@ -28,7 +28,7 @@ function App() {
           onChange={(e) => setInputValue(e.target.value)}
         />
 
-        <button type="submit">Clica aqui</button>
+        <button type="submit">Add to the agenda</button>
       </form>
       <ul>
         {listas.map((lista) => (
