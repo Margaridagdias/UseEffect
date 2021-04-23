@@ -24,10 +24,10 @@ function reducer(todos, action) {
     case ACTIONS.DELETE_TODO:
       //if the ID of our todo is not equal to the payload id, we keep it
       //otherwise we get rid of it
-      return todos.filter((todo) => todo.id !== action.payload.id)
+      return todos.filter((todo) => todo.id !== action.payload.id);
 
-      default:
-        return todos
+    default:
+      return todos;
   }
 }
 
@@ -48,12 +48,13 @@ export default function App() {
   return (
     <>
       <div className="App">
-        <h1>My todo list</h1>
+        <h1>My to do list</h1>
 
         <form onSubmit={handleSubmit}>
           <input
             type="text"
             value={name}
+            placeholder="add task here"
             onChange={(e) => setName(e.target.value)}
           />
         </form>
